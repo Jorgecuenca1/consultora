@@ -1,0 +1,11 @@
+Django==3.1.1
+django-import-export
+Pillow
+django-paypal
+djangorestframework
+django-cors-headers
+python-barcode
+barcode
+qrcode
+pillow
+django-smart-selects
