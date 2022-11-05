@@ -5,7 +5,27 @@ from django.shortcuts import render
 def index(request):
 
     return render(request,'index.html')
+def index2(request):
 
+    return render(request,'index-2.html')
+def index3(request):
+
+    return render(request,'index-3.html')
+def index4(request):
+
+    return render(request,'index-4.html')
+def index5(request):
+
+    return render(request,'index-5.html')
+def index6(request):
+
+    return render(request,'index-6.html')
+def index7(request):
+
+    return render(request,'index-7.html')
+def index8(request):
+
+    return render(request,'index-8.html')
 def about(request):
 
     return render(request,'about.html')
@@ -66,7 +86,7 @@ def faq(request):
     return render(request,'faq.html')
 def financials(request):
 
-    return render(request,'financials-banking.html.html')
+    return render(request,'financials-banking.html')
 def grid(request):
 
     return render(request,'grid.html')
