@@ -24,6 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', informacion_views.index, name='index'),
+    path('index.html', informacion_views.index, name='index'),
 path('index-2.html', informacion_views.index2, name='index2'),
 path('index-3.html', informacion_views.index3, name='index3'),
 path('index-4.html', informacion_views.index4, name='index4'),
