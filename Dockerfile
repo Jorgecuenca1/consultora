@@ -1,6 +1,7 @@
 FROM python:3
-ENV PYTHONUNBUFFERED=1
-WORKDIR /code-backend
-COPY requirements.txt /code-backend/
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /code-agentcultural
+COPY requirements.txt /code-agentcultural/
+WORKDIR /code-agentcultural
 RUN pip install -r requirements.txt
-COPY blog /code-backend/
+COPY . /code-agentcultural
