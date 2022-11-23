@@ -276,7 +276,7 @@ body {
                     <ul class="dropdown-menu">
                         {% for submenu in submenus %}
                         {% if submenu.menu.id == menu.id %}
-                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="{{submenu.url}}">{{submenu.titulo}}</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
