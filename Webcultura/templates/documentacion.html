@@ -1,0 +1,350 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Carousel Template · Bootstrap v5.2</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+
+
+    <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'carousel.css' %}" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .dropdown-menu {
+        text-color: #FFF;
+
+      }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="text-bg-primary p-3">
+    <ul class="nav">
+        <div class="col-md-4">
+            <img src="https://backend.culturameta.gov.co/media/logo-svg_0GLFy3G.png" alt="Logo" width="70" height="20"
+                 class="d-inline-block align-text-top">
+
+        </div>
+    </ul>
+</div>
+<div class="text-bg-white p-3">
+    <ul class="nav">
+        <div class="col-md-4">
+            <img src="https://backend.culturameta.gov.co/media/logo1_kvEqcAU.png" alt="Logo" width="100" height="48"
+                 class="d-inline-block align-text-top">
+            <img src="https://backend.culturameta.gov.co/media/logo2_1_GKBUh12.png" alt="Logo" width="100" height="48"
+                 class="d-inline-block align-text-top">
+            <img src="https://backend.culturameta.gov.co/media/logo3_w6croFN.png" alt="Logo" width="100" height="48"
+                 class="d-inline-block align-text-top">
+            <img src="https://backend.culturameta.gov.co/media/logogobernacion_x8bVAkk.png" alt="Logo" width="100"
+                 height="48"
+                 class="d-inline-block align-text-top">
+
+        </div>
+    </ul>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#777"/>
+            </svg>
+
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Example headline.</h1>
+                    <p>Some representative placeholder content for the first slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#777"/>
+            </svg>
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#777"/>
+            </svg>
+
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="text-bg-primary p-3">
+    <div class="container">
+        <header class="d-flex justify-content-center py-3">
+
+            <ul class="nav nav-pills">
+
+                {% for menu in menus %}
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        {{menu.titulo}}
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% for submenu in submenus %}
+                        {% if submenu.menu.id == menu.id %}
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </ul>
+
+        </header>
+    </div>
+</div>
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+
+
+
+<p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    2022
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+    2021
+  </button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+    2020
+  </button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+    2019
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <h3>2022</h3>
+   {% for convocatoria in convocatoria2022 %}
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{convocatoria.titulo}}</h5>
+    <p class="card-text">{{convocatoria.descripcioncorta}}</p>
+    <a href="/convocatoria/{{convocatoria.slug}}" class="btn btn-primary">ver mas ..</a>
+  </div>
+</div>
+  {% endfor %}
+
+</div>
+        <div class="collapse" id="collapseExample1">
+          <h3>2021</h3>
+  {% for convocatoria in convocatoria2021 %}
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{convocatoria.titulo}}</h5>
+    <p class="card-text">{{convocatoria.descripcioncorta}}</p>
+    <a href="/convocatoria/{{convocatoria.slug}}" class="btn btn-primary">ver mas ..</a>
+  </div>
+</div>
+  {% endfor %}
+
+</div>
+          <div class="collapse" id="collapseExample2">
+          <h3>2020</h3>
+  {% for convocatoria in convocatoria2020 %}
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{convocatoria.titulo}}</h5>
+    <p class="card-text">{{convocatoria.descripcioncorta}}</p>
+    <a href="/convocatoria/{{convocatoria.slug}}" class="btn btn-primary">ver mas ..</a>
+  </div>
+</div>
+  {% endfor %}
+
+</div>
+          <div class="collapse" id="collapseExample3">
+          <h3>2019</h3>
+  {% for convocatoria in convocatoria2019 %}
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{convocatoria.titulo}}</h5>
+    <p class="card-text">{{convocatoria.descripcioncorta}}</p>
+    <a href="/convocatoria/{{convocatoria.slug}}"class="btn btn-primary">ver mas ..</a>
+  </div>
+</div>
+  {% endfor %}
+
+</div>
+      </div>
+      <div class="col-md-5">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+<!-- FOOTER -->
+<div class="text-bg-primary p-3">
+
+<div class="container-fluid">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-4 mb-6">
+     <h5>Información de contacto</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instituto departamental de cultura del meta</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Dirección sede principal: Crr 8 #8-110 | 4-2 a San Martín de los Llanos - Meta - Colombia.</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Teléfono: (8) 6716222 | Email: contacto@culturameta.gov.co</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terminos y condiciones</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Política de privacidad y tratamiento de datos personales</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"> Política de derechos de autor </a></li>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tiktok</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Torneo internacional</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">del joropo</a></li>
+        </ul>
+      </div>
+
+
+
+      <div class="col-md-5 offset-md-1 mb-3">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.784532801394!2d-73.69506763926488!3d3.6921837737990497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e0f18aaa78b79%3A0xd5b8c9f9fefbb59c!2sHOSPITAL%20LOCAL%20SAN%20MARTIN%20META!5e0!3m2!1ses!2sco!4v1668740355871!5m2!1ses!2sco" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+  </footer>
+</div>
+<div class="text-bg-primary p-3">
+    <ul class="nav">
+        <div class="col-md-4">
+            <img src="https://backend.culturameta.gov.co/media/logo-svg_0GLFy3G.png" alt="Logo" width="70" height="20"
+                 class="d-inline-block align-text-top">
+
+        </div>
+    </ul>
+</div>
+</div>
+
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+
+</body>
+</html>

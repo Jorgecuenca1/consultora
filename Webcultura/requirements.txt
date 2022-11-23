@@ -1,0 +1,12 @@
+
+
+Django==3.2
+django-chartjs==2.1.0
+django-import-export==2.0.2
+msgpack==0.6.2
+django-cors-headers
+django-dynamic-raw-id
+Pillow==7.0.0
+django-file-validator
+django-ckeditor
+django-nested-admin

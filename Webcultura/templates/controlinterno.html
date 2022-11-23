@@ -1,0 +1,747 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Carousel Template · Bootstrap v5.2</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+
+
+
+
+
+<link href="{% static "assets/dist/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href= "{% static "carousel.css" %}" rel="stylesheet">
+  </head>
+  <body>
+
+<div class="text-bg-primary p-3">
+    <div class="container-fluid">
+                <header class="d-flex justify-content-center py-3">
+ <div class="col-md-7">
+                <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+                     class="d-inline-block align-text-top">
+
+            </div>
+            <div class="col-md-3">
+                <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+                     class="d-inline-block align-text-top">
+
+            </div>
+        </header>
+
+    </div>
+</div>
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"/>
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Example headline.</h1>
+                        <p>Some representative placeholder content for the first slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"/>
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Another example headline.</h1>
+                        <p>Some representative placeholder content for the second slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"/>
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>One more for good measure.</h1>
+                        <p>Some representative placeholder content for the third slide of this carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="text-bg-primary p-3">
+    <div class="container">
+        <header class="d-flex justify-content-center py-3">
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+
+                {% for menu in menus %}
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="text-light">{{menu.titulo}}</a>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% for submenu in submenus %}
+                        {% if submenu.menu.id == menu.id %}
+                        <li class="nav-item"><a href="#" class="text-light">submenu</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </ul>
+
+        </header>
+    </div>
+    </div>
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-12">
+        <h1 class="text-primary" align="center">Control Interno</h1>
+         </div>
+      <div class="col-md-12">
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+           <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true" aria-controls="panelsStayOpen-collapseSix">
+        2022
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+      <div class="accordion-body">
+
+        1. PLAN GENERAL CONTROL INTERNO 2022
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "PLANGENERAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+        <br/>
+         2. INFORMES FINALES DE AUDITORIA:
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "INFORMEFINAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         3. PLAN MEJORAMINTO INSTITUCIONALES(CDM):
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "PLANMEJORAMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         4. INFORMES LEGALES:
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "INFORMELEGAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         5. REGISTRO DILIGENCIAMIENTO FURAG II:
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "REGISTRO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}:</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         6. COMITE INSTITUCIONAL CONTROL INTERNO:
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "COMITE" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         7. PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "MEJORAMIENTOAUDITORIA" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+        8. SEGUIMIENTO PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "SEGUIMIENTOPLAN" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         9. SEGUIMIENTO
+        <br/>
+        {% for control in control2022 %}
+        {% if control.modulo == "SEGUIMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+       </div>
+    </div>
+  </div>
+           <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+        2021
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+      <div class="accordion-body">
+
+        1. PLAN GENERAL CONTROL INTERNO 2021
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "PLANGENERAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+        <br/>
+         2. INFORMES FINALES DE AUDITORIA:
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "INFORMEFINAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         3. PLAN MEJORAMINTO INSTITUCIONALES(CDM):
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "PLANMEJORAMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         4. INFORMES LEGALES:
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "INFORMELEGAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         5. REGISTRO DILIGENCIAMIENTO FURAG II:
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "REGISTRO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}:</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         6. COMITE INSTITUCIONAL CONTROL INTERNO:
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "COMITE" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         7. PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "MEJORAMIENTOAUDITORIA" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+        8. SEGUIMIENTO PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "SEGUIMIENTOPLAN" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         9. SEGUIMIENTO
+        <br/>
+        {% for control in control2021 %}
+        {% if control.modulo == "SEGUIMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+           <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+        2020
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
+      <div class="accordion-body">
+
+        1. PLAN GENERAL CONTROL INTERNO 2020
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "PLANGENERAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+        <br/>
+         2. INFORMES FINALES DE AUDITORIA:
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "INFORMEFINAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         3. PLAN MEJORAMINTO INSTITUCIONALES(CDM):
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "PLANMEJORAMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         4. INFORMES LEGALES:
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "INFORMELEGAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         5. REGISTRO DILIGENCIAMIENTO FURAG II:
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "REGISTRO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}:</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         6. COMITE INSTITUCIONAL CONTROL INTERNO:
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "COMITE" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         7. PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "MEJORAMIENTOAUDITORIA" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+        8. SEGUIMIENTO PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "SEGUIMIENTOPLAN" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         9. SEGUIMIENTO
+        <br/>
+        {% for control in control2020 %}
+        {% if control.modulo == "SEGUIMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+           <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
+        2019
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNine">
+      <div class="accordion-body">
+
+        1. PLAN GENERAL CONTROL INTERNO 2019
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "PLANGENERAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+        <br/>
+         2. INFORMES FINALES DE AUDITORIA:
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "INFORMEFINAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         3. PLAN MEJORAMINTO INSTITUCIONALES(CDM):
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "PLANMEJORAMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         4. INFORMES LEGALES:
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "INFORMELEGAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         5. REGISTRO DILIGENCIAMIENTO FURAG II:
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "REGISTRO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}:</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         6. COMITE INSTITUCIONAL CONTROL INTERNO:
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "COMITE" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         7. PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "MEJORAMIENTOAUDITORIA" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+        8. SEGUIMIENTO PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "SEGUIMIENTOPLAN" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         9. SEGUIMIENTO
+        <br/>
+        {% for control in control2019 %}
+        {% if control.modulo == "SEGUIMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+           <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false" aria-controls="panelsStayOpen-collapseTen">
+        2018
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTen">
+      <div class="accordion-body">
+
+        1. PLAN GENERAL CONTROL INTERNO 2018
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "PLANGENERAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+        <br/>
+         2. INFORMES FINALES DE AUDITORIA:
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "INFORMEFINAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         3. PLAN MEJORAMINTO INSTITUCIONALES(CDM):
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "PLANMEJORAMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         4. INFORMES LEGALES:
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "INFORMELEGAL" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         5. REGISTRO DILIGENCIAMIENTO FURAG II:
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "REGISTRO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}:</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         6. COMITE INSTITUCIONAL CONTROL INTERNO:
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "COMITE" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         7. PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "MEJORAMIENTOAUDITORIA" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+        8. SEGUIMIENTO PLAN MEJORAMIENTO AUDITORIA INTERNA:
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "SEGUIMIENTOPLAN" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         <br/>
+         9. SEGUIMIENTO
+        <br/>
+        {% for control in control2018 %}
+        {% if control.modulo == "SEGUIMIENTO" %}
+        <strong><a class="btn btn-link"href="{{control.url}}"role="button">{{control.name}}</a></strong>
+         <br/>
+       {% endif %}
+      {% endfor %}
+         </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+</div>
+      </div>
+
+
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+
+<div class="container">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+
+</main>
+
+
+    <script src="{% static "assets/dist/js/bootstrap.bundle.min.js"%}"></script>
+
+
+  </body>
+</html>
